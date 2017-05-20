@@ -10,7 +10,7 @@ while ($row = oci_fetch_array($stid, OCI_BOTH)) {
 
     $response=array("codigo"=>"".$row[0],
                     "nombre"=>"".$row[1],
-                    "costo"=>"".$row[2],
+                    "valor"=>"".$row[2],
                     "tiempo"=>"".$row[3],
                     "descripcion"=>"".$row[4]
 

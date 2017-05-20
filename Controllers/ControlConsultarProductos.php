@@ -12,7 +12,7 @@ while ($row = oci_fetch_array($stid, OCI_BOTH)) {
                     "nombre"=>"".$row[1],
                     "valor_compra"=>"".$row[2],
                     "valor_venta"=>"".$row[3],
-                    "candidad"=>"".$row[4],
+                    "cantidad"=>"".$row[4],
                     "ruta"=>"".$row[5],
                     "descripcion"=>"".$row[6]
 

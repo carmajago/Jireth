@@ -36,13 +36,13 @@ param codigo ,Este es el código del producto que se desea actualizar
 param dato_actualizar ,datos que de desea actualizar(
 param actualizar ,dato que se va a actualizar.se coloca en la invocacion  "codigo" o "nombre" o "cantidad" etc......
 **/
-procedure actualizar_productos(codigo  productos.codigo%type,dato_actualizar varchar,actualizar varchar);
+procedure actualizar_productos(codigos  productos.codigo%type,dato_actualizar varchar,actualizar varchar);
 
-procedure actualizar_servicios(codigo  servicios.codigo%type,dato_actualizar varchar,actualizar varchar);
+procedure actualizar_servicios(codigos  servicios.codigo%type,dato_actualizar varchar,actualizar varchar);
 
-procedure eliminar_producto(codigo productos.codigo%type);
+procedure eliminar_producto(codigos productos.codigo%type);
 
-procedure eliminar_servicio(codigo servicios.codigo%type);
+procedure eliminar_servicio(codigos servicios.codigo%type);
 
 end jireth;
 /
@@ -80,52 +80,54 @@ create or replace package body jireth as
 	insert into servicios values(codigo,nombre,costoServicio,tiempoHoras,descripcion);
 	end agregar_servicios;
 
-	procedure actualizar_productos(codigo  productos.codigo%type,dato_actualizar varchar,actualizar varchar)
+	procedure actualizar_productos(codigos  productos.codigo%type,dato_actualizar varchar,actualizar varchar)
 	as
 	begin
 
 	if(actualizar='codigo') then
-			update productos set codigo=dato_actualizar where codigo=codigo;
+			update productos set codigo=dato_actualizar where codigo=codigos;
 	elsif(actualizar='nombre') then
-		update productos set nombre=dato_actualizar where codigo=codigo;
+		update productos set nombre=dato_actualizar where codigo=codigos;
 	elsif(actualizar='valor_compra') then
-		update productos set valor_compra=dato_actualizar where codigo=codigo;
+		update productos set valor_compra=dato_actualizar where codigo=codigos;
 	elsif(actualizar='valor_venta') then
-			update productos set valor_venta=dato_actualizar where codigo=codigo;
+			update productos set valor_venta=dato_actualizar where codigo=codigos;
+	elsif(actualizar='disponibles') then
+			update productos set disponibles=dato_actualizar where codigo=codigos;
 	elsif( actualizar='ruta_imagen') then
-			update productos set ruta_imagen=dato_actualizar where codigo=codigo;
+			update productos set ruta_imagen=dato_actualizar where codigo=codigos;
 	elsif( actualizar='descripcion') then
-			update productos set descripcion=dato_actualizar where codigo=codigo;
+			update productos set descripcion=dato_actualizar where codigo=codigos;
 	end if;
 	end actualizar_productos;
 
-	procedure actualizar_servicios(codigo  servicios.codigo%type,dato_actualizar varchar,actualizar varchar)
+	procedure actualizar_servicios(codigos  servicios.codigo%type,dato_actualizar varchar,actualizar varchar)
 	as
 	begin
 
 	if(actualizar='codigo') then
-			update servicios set codigo=dato_actualizar where codigo=codigo;
+			update servicios set codigo=dato_actualizar where codigo=codigos;
 	elsif(actualizar='nombre') then
-			update servicios set nombre=dato_actualizar where codigo=codigo;
+			update servicios set nombre=dato_actualizar where codigo=codigos;
 	elsif(actualizar='costoServicio') then
-			update servicios set costoServicio=dato_actualizar where codigo=codigo;
+			update servicios set costoServicio=dato_actualizar where codigo=codigos;
 	elsif( actualizar='tiempoHoras') then
-			update servicios set tiempoHoras=dato_actualizar where codigo=codigo;
+			update servicios set tiempoHoras=dato_actualizar where codigo=codigos;
 	elsif( actualizar='descripcion') then
-			update servicios set descripcion=dato_actualizar where codigo=codigo;
+			update servicios set descripcion=dato_actualizar where codigo=codigos;
 	end if;
 	end actualizar_servicios;
 
-	procedure eliminar_producto(codigo productos.codigo%type)
+	procedure eliminar_producto(codigos productos.codigo%type)
 	as
 	begin
-	delete from productos where codigo=codigo;
+	delete from productos where codigo=codigos;
 	end eliminar_producto;
 
-	procedure eliminar_servicio(codigo servicios.codigo%type)
+	procedure eliminar_servicio(codigos servicios.codigo%type)
 	as
 	begin
-	delete from servicios where codigo=codigo;
+	delete from servicios where codigo=codigos;
 	end eliminar_servicio;
 end jireth;
 /

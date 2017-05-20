@@ -8,7 +8,7 @@ create table servicios(
 codigo varchar2(15)    primary key not null,
 nombre varchar2(30) not null,
 costoServicio number(8),
-tiempoHoras number(2,1),
+tiempoHoras number,
 descripcion  varchar2(1000)
 );
 create table productos(

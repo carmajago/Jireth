@@ -99,6 +99,7 @@ function mostrar_Servicios() {
 }
 function guardarCambios(codigo) {
     var codigoN=document.getElementById(""+codigo).value;
+
     var nombre=document.getElementById(""+codigo+",nombre").value;
     var valor=document.getElementById(""+codigo+",valor").value;
     var tiempo=document.getElementById(""+codigo+",tiempo").value;
