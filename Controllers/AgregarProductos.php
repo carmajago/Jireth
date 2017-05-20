@@ -25,7 +25,7 @@ oci_bind_by_name($stid, ':ruta_imagen', $direccion);
 oci_bind_by_name($stid, ':descripcion', $descripcion);
 oci_execute($stid);
 
-echo "<SCRIPT>parent.window.location='../vistas/Registrar_Producto.html';</SCRIPT>";
+//echo "<SCRIPT>parent.window.location='../vistas/Registrar_Producto.html';</SCRIPT>";
 
 
 ?>
