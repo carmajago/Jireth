@@ -1,0 +1,37 @@
+
+.heigth_bar{
+    height:10vh;
+
+}
+.barra_nombre{
+    height: 15vh;
+}
+
+.heigth_section{
+    height:70vh;
+}
+.alto_seccion{
+    height: 100%;
+}
+
+
+.margen{
+    margin: auto;
+    margin-top: 10px;
+
+    height: 100%;
+}
+
+.pantalla_productos{
+    margin-top:15px ;
+}
+.read{
+
+    position:absolute;
+    height: auto;
+    width: 150px;
+    bottom:10px;
+
+    right:20px;
+
+}

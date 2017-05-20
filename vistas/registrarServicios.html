@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jireth</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/style.css" rel="stylesheet">
+	<link href="../css/StyleServices.css" rel="stylesheet">
+    <link href="../css/viewport.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="../js/jquery.min.js.descarga" language="JavaScript1.5"></script>
+	<script src="../js/JSAgregarServicio.js" language="JavaScript1.5"></script>
+
+
+
+</head>
+
+  <body>
+
+
+  <div class="heigth_bar"></div>
+<!---------------------------------------------------------------------------->
+ <!NOMBRE ENCABEZADO--->
+  <div class="col-xs-12 bg-primary barra_nombre">
+	  <h1 class="text-center">Registrar servicio</h1>
+  </div>
+
+	<div class="heigth_section col-xs-12">
+
+			<div class="navbar navbar-default navbar navbar-default navbar-fixed-top heigth_bar" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand">LUJOS JIRETH</a>
+					</div>
+					<div class="navbar-collapse collapse navbar-right">
+						<ul class="nav navbar-nav">
+							<li class="active"><a>HOME</a></li>
+							<li><a>ABOUT</a></li>
+							<li><a >CONTACT</a></li>
+							<li class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown">PAGES <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a>BLOG</a></li>
+									<li><a >SINGLE POST</a></li>
+									<li><a>PORTFOLIO</a></li>
+									<li><a>SINGLE PROJECT</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+
+		<!--------------------------------------------------------------------->
+		<!codificar desde aquí>
+		<section class="col-xs-12 section">
+
+			<div class="col-xs-12 margen">
+				<div class="col-xs-12 pantalla_productos">
+					<div class="col-xs-2">
+						<label>Código servicio</label>
+					</div>
+					<div class="col-xs-4">
+						<input class="form-control" id="codigo" name="codigo" >
+					</div>
+				</div>
+				<div class="col-xs-12 pantalla_productos">
+					<div class="col-xs-2">
+						<label>Nombre servicio</label>
+					</div>
+					<div class="col-xs-4">
+						<input class="form-control" id="nombre" name="nombre">
+					</div>
+				</div>
+				<div class="col-xs-12 pantalla_productos">
+					<div class="col-xs-2">
+						<label>Valor</label>
+					</div>
+					<div class="col-xs-4">
+						<input class="form-control" id="valor" name="valor">
+					</div>
+				</div>
+				<div class="col-xs-12 pantalla_productos">
+					<div class="col-xs-2">
+						<label>Tiempo</label>
+					</div>
+					<div class="col-xs-4">
+						<input  type="number" min="0" class="form-control" id="tiempo" name="tiempo">
+					</div>
+				</div>
+
+
+				<div class="col-xs-12 pantalla_productos">
+					<div class="col-xs-2">
+						<label>Descripción</label>
+					</div>
+					<div class="col-xs-4">
+						<textarea rows="4" cols="50" class="form-control" id="descripcion" name="descripcion"></textarea>
+					</div>
+				</div>
+				<div class="col-xs-10"></div>
+				<div class="col-xs-2">
+
+				</div>
+
+				<input type="submit" class="btn-primary form-control read" onclick="AgregarServicio()" value="Registrar servicio">
+			</div>
+
+		</section>
+
+	</div>
+
+
+
+
+
+
+</body>
+</html>

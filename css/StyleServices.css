@@ -1,0 +1,20 @@
+.iframe {
+
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    background: white;
+    padding: 10px;
+    float: left;
+}
+
+.btnAceptar {
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.pantalla_servicios{
+    margin-top:15px ;
+}
+
+

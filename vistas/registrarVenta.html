@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jireth</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/style.css" rel="stylesheet">
+	<link href="../css/viewport.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/tb.css">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="../js/jquery.min.js.descarga" language="JavaScript1.5"></script>
+	<script src="../js/jsRegistrarVenta" language="JavaScript1.5"></script>
+
+  </head>
+
+  <body>
+
+
+  <div class="heigth_bar"></div>
+<!---------------------------------------------------------------------------->
+ <!NOMBRE ENCABEZADO--->
+  <div class="col-xs-12 bg-primary barra_nombre">
+	  <h1>productos</h1>
+  </div>
+<!-------------------------------------------------------------------->
+	<div class="heigth_section col-xs-offset-1 col-xs-10">
+
+			<div class="navbar navbar-default navbar navbar-default navbar-fixed-top heigth_bar" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand">SOLID.</a>
+					</div>
+					<div class="navbar-collapse collapse navbar-right">
+						<ul class="nav navbar-nav">
+							<li class="active"><a>INICIO</a></li>
+							<li><a>SERVICIOS</a></li>
+							<li><a >PRODUCTOS</a></li>
+							<li class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown">USUARIO<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a>BLOG</a></li>
+									<li><a >SINGLE POST</a></li>
+									<li><a>PORTFOLIO</a></li>
+									<li><a>SINGLE PROJECT</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		<br>
+
+		<div class="row">
+			<div class="col-xs-6">
+				<div class="input-group">
+					<span class="input-group-addon">*</span>
+					<input type="text" class="form-control" placeholder="Cedula/Nit" id="identificador">
+					<span class="input-group-addon">Nit</span>
+					<span class="input-group-addon">
+        				<input type="checkbox" id="chexkNit">
+      				</span>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+					<input class="form-control" placeholder="Email" type="text" id="email">
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-xs-6">
+				<div class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+					<input class="form-control" placeholder="Nombre" type="text" id="nombre">
+				</div>
+			</div>
+
+			<div class="col-xs-6">
+				<div class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+					<input class="form-control" placeholder="Apellido" type="text" id="apellido">
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-xs-6">
+				<h4 id="nFactura"></h4>
+			</div>
+
+			<div class="col-xs-6">
+				<h4 id="fecha"></h4>
+			</div>
+		</div>
+
+		<br>
+		<div class="row clearfix">
+			<div class="col-xs-12 column">
+				<table class="table table-fixed" id="tab_logic" style="height: 150px">
+					<thead>
+					<tr >
+						<th class="text-center col-xs-1">
+							#
+						</th>
+						<th class="text-center col-xs-2">
+							Codigo Producto
+						</th>
+						<th class="text-center col-xs-4">
+							Producto
+						</th>
+						<th class="text-center col-xs-1">
+							Cantidad
+						</th>
+						<th class="text-center col-xs-2">
+							Valor Unidad
+						</th>
+						<th class="text-center col-xs-2">
+							Valor Total
+						</th>
+					</tr>
+					</thead>
+					<tbody style="height: 160px;">
+					<tr id='addr0'>
+						<td class="col-xs-1">
+							1
+						</td>
+						<td class="col-xs-2">
+							<input type="text" id='codigo0' onfocusout="llenarFila(this.id)" placeholder='Codigo' class="form-control"/>
+						</td>
+						<td class="col-xs-4">
+							<input id='producto0' type="text" placeholder='Producto' class="form-control"/>
+						</td>
+						<td class="col-xs-1">
+							<input type="number" id='cantidad0' onchange="ponerPrecio(this.id)" placeholder='Cantidad' min="1" max="10" class="form-control"/>
+						</td>
+						<td class="col-xs-2">
+							<p id='valorUnitario0'>-</p>
+						</td>
+						<td class="col-xs-2">
+							<p id='valorTotal0'>-</p>
+						</td>
+					</tr>
+					<tr id='addr1'></tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-offset-8 col-xs-2">
+				<B style="font-size: larger">Sub Total</B>
+			</div>
+			<div class="col-xs-2">
+				<B id="subTotal" style="font-size: larger"></B>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-offset-8 col-xs-2">
+				<B style="font-size: larger">IVA</B>
+			</div>
+			<div class="col-xs-2">
+				<B id="iva" style="font-size: larger"></B>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-offset-8 col-xs-2">
+				<B style="font-size: larger">Total</B>
+			</div>
+			<div class="col-xs-2">
+				<B id="Total" style="font-size: larger"></B>
+			</div>
+		</div>
+
+		<br>
+
+		<a id="add_row" class="form-control col-2-xs text-center btn-primary">Agregar</a>
+		<br>
+		<a id="registrar" class="form-control col-2-xs text-center btn-primary" onclick="Registrar()">Registrar</a>
+
+		<section class="col-xs-12 heigth_section">
+
+
+		</section>
+
+
+
+	</div>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+var subT = 0;
+var Tot = 0;
+var iva = 0;
+
+$(document).ready(function(){
+    var i=1;
+    $('#nFactura').text("Factura No. "+ i);
+    $("#add_row").click(function(){
+        $('#addr'+i).html(
+            "<td class='col-xs-1'>"+ (i+1) +"</td>" +
+            "<td class='col-xs-2'><input id='codigo"+i+"' type='text' placeholder='Codigo' class='form-control' onfocusout='llenarFila(this.id)'> </td>" +
+            "<td class='col-xs-4'><input  id='producto"+i+"' type='text' placeholder='Producto'  class='form-control'></td>" +
+            "<td class='col-xs-1'><input  id='cantidad"+i+"' type='number' onchange='ponerPrecio(this.id)' min='1' max='10' placeholder='Cantidad'  class='form-control'></td>" +
+            "<td class='col-xs-2'><p id='valorUnitario"+i+"'>-</td>" +
+            "<td class='col-xs-2'><p id='valorTotal"+i+"'>-</td>"
+        );
+
+        $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
+        i++;
+    });
+
+    var hoy = new Date();
+    var dd = hoy.getDate();
+    var mm = hoy.getMonth()+1; //hoy es 0!
+    var yyyy = hoy.getFullYear();
+
+    if(dd<10) {
+        dd='0'+dd
+    }
+
+    if(mm<10) {
+        mm='0'+mm
+    }
+
+    hoy = mm+'/'+dd+'/'+yyyy;
+
+    $("#fecha").text(""+hoy);
+
+});
+
+function llenarFila(idProd){
+    var indexFila = idProd.charAt(idProd.length-1);
+    $.post("../Controllers/ControlConsultarProductos.php",{}, function (respuesta) {
+        var existe = 0;
+        var datos= JSON.parse(respuesta);
+
+        for (var t=0; t < datos.length; t++)
+        {
+            if(datos[t].codigo == document.getElementById(idProd).value){
+                document.getElementById("producto"+indexFila).value = datos[t].nombre;
+                $('#valorUnitario'+indexFila).text(""+datos[t].valor_venta);
+                existe = 1;
+            }
+        }
+        if(!existe){
+            alert("codigo de producto invalido");
+        }
+    });
+}
+
+function ponerPrecio(idCont){
+    var precio;
+    var indexFila = idCont.charAt(idCont.length-1);
+    if($('#valorTotal'+indexFila).text() != '-'){
+        Tot = Tot - parseInt($('#valorTotal'+indexFila).text());
+        subT = Math.floor(Tot * (0.81));
+        iva = Math.floor(Tot * (0.19));
+    }
+    if(document.getElementById("valorUnitario"+indexFila).text != '-'){
+        precio = parseInt(document.getElementById("cantidad"+indexFila).value) * parseInt(
+                $('#valorUnitario'+indexFila).text());
+        $('#valorTotal'+indexFila).text(""+precio);
+
+        Tot = Tot + precio;
+        subT = Math.floor(Tot * (0.81));
+        iva = Math.floor(Tot * (0.19));
+        $('#Total').text("$"+Tot);
+        $('#subTotal').text("$"+subT);
+        $('#iva').text("$"+iva);
+    }
+
+}
+
+
+function Registrar() {
+    if(document.getElementById("identificador").value == ""
+       ||document.getElementById("nombre").value == ""
+        ||document.getElementById("apellido").value == ""
+        ||document.getElementById("identificador").value == ""){
+        alert("Hay campos sin llenar")
+    }else {
+        var cedula = document.getElementById("identificador").value;
+        var nombre = document.getElementById("nombre").value;
+        var apellido = document.getElementById("apellido").value;
+        var correo = document.getElementById("email").value;
+        $.post("../Controllers/ConsultarCliente.php", {
+                "cedula": cedula,
+                "nombre": nombre,
+                "apellido": apellido,
+                "correo": correo
+            }
+            ,function (respuesta) {
+
+                if (respuesta != 1) {
+                    var r = confirm("El cliente no esta registrado. ¿Desea registrarlo?");
+                    if (r == true) {
+                        window.open("../vistas/RegistrarCliente.html");
+                    }
+                }
+            });
+    }
+
+
+}
