@@ -43,3 +43,14 @@ cantidad number,
 CONSTRAINT ventaFK
     FOREIGN KEY(id_venta) REFERENCES registro_ventas(id_venta) 
 );
+
+create table sugerencias(
+cedula varchar2(20),
+sugerencia varchar2(4000),
+estado varchar2(30),
+CONSTRAINT PK
+PRIMARY KEY (cedula,sugerencia),
+CONSTRAINT FK
+    FOREIGN KEY(cedula) REFERENCES clientes(id) 
+);
+

@@ -30,6 +30,21 @@ procedure agregar_productos(codigo productos.codigo%type,
 							descripcion productos.descripcion%type);
 
 
+/*
+Agregar un nuevo mensaje a la base de datos
+*/
+
+procedure agregar_sugerencia(cedula sugerencias.cedula%type,
+							 sugerencia sugerencias.sugerencia%type,
+							 estado sugerencias.estado%type);
+
+/*
+Procedimiento para cambiar el estado de las sugerencias
+*/
+
+procedure cambiar_estado(cedulax sugerencias.cedula%type,
+							 sugerenciax sugerencias.sugerencia%type);
+
 /**
 *Procedimiento que actualiza algún producto
 param codigo ,Este es el código del producto que se desea actualizar
@@ -69,6 +84,28 @@ create or replace package body jireth as
 	begin
 	insert into productos values(codigo,nombre,valor_compra,valor_venta,disponibles,ruta_imagen,descripcion);
 	end agregar_productos;
+
+
+	procedure agregar_sugerencia(cedula sugerencias.cedula%type,
+							 sugerencia sugerencias.sugerencia%type,
+							 estado sugerencias.estado%type)
+	as
+	begin
+	insert into sugerencias values(cedula,sugerencia,estado);
+	end agregar_sugerencia;
+
+
+
+	procedure cambiar_estado(cedulax sugerencias.cedula%type,
+							 sugerenciax sugerencias.sugerencia%type)
+	as
+	begin
+	update sugerencias set estado='revisado' where cedula=cedulax and sugerencia=sugerenciax;
+	end cambiar_estado;
+
+
+
+	
 
 	procedure  agregar_servicios(codigo servicios.codigo%type, 
 							nombre servicios.nombre%type,
