@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4227847-e001-4890-a37c-eefd7c1b3b75" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Controllers/EliminarProductos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BD/basejireth.sql" afterPath="$PROJECT_DIR$/BD/basejireth.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BD/paquetejireth.sql" afterPath="$PROJECT_DIR$/BD/paquetejireth.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/AgregarProductos.php" afterPath="$PROJECT_DIR$/Controllers/AgregarProductos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/ControlConsultarProductos.php" afterPath="$PROJECT_DIR$/Controllers/ControlConsultarProductos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/ControlConsultarServicios.php" afterPath="$PROJECT_DIR$/Controllers/ControlConsultarServicios.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/actualizarProductos.php" afterPath="$PROJECT_DIR$/Controllers/actualizarProductos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/viewport.css" afterPath="$PROJECT_DIR$/css/viewport.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/JSActualizarProductos.js" afterPath="$PROJECT_DIR$/js/JSActualizarProductos.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/JSAgregarServicio.js" afterPath="$PROJECT_DIR$/js/JSAgregarServicio.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/JSeActualizarServicio.js" afterPath="$PROJECT_DIR$/js/JSeActualizarServicio.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/JSeliminarProducto.js" afterPath="$PROJECT_DIR$/js/JSeliminarProducto.js" />
-    </list>
+    <list default="true" id="e4227847-e001-4890-a37c-eefd7c1b3b75" name="Default" comment="" />
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,8 +32,8 @@
       <file leaf-file-name="actualizarProductos.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vistas/actualizarProductos.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="70" column="21" lean-forward="true" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
+            <state relative-caret-position="284">
+              <caret line="67" column="39" lean-forward="true" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -382,16 +368,15 @@
       <workItem from="1495293977111" duration="79000" />
       <workItem from="1495297866491" duration="1030000" />
       <workItem from="1495298932359" duration="55000" />
-      <workItem from="1495298989212" duration="5428000" />
+      <workItem from="1495298989212" duration="6386000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34765000" />
+    <option name="totallyTimeSpent" value="35723000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2496329" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -699,8 +684,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vistas/actualizarProductos.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="70" column="21" lean-forward="true" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
+        <state relative-caret-position="284">
+          <caret line="67" column="39" lean-forward="true" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
           <folding />
         </state>
       </provider>
