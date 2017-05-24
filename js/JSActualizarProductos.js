@@ -29,9 +29,9 @@ function mostrar_Productos() {
                     td2.setAttribute("class", "col-xs-2");
                     td3.setAttribute("class", "col-xs-2");
                     td4.setAttribute("class", "col-xs-2");
-                    td5.setAttribute("class", "col-xs-2");
+                    td5.setAttribute("class", "col-xs-1");
                     td6.setAttribute("class", "col-xs-2");
-                    td6.setAttribute("class", "col-xs-1");
+                    td7.setAttribute("class", "col-xs-2");
 
 
                     //var  imagen=document.createElement("img")

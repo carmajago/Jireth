@@ -26,7 +26,7 @@
 	  <h1 class="text-center">Regisrar productos</h1>
   </div>
 
-	<div class="heigth_section col-xs-12">
+  <div class="heigth_section col-xs-offset-2 col-xs-8">
 
 			<div class="navbar navbar-default navbar navbar-default navbar-fixed-top heigth_bar" role="navigation">
 				<div class="container">
@@ -62,76 +62,71 @@
 		<!--------------------------------------------------------------------->
 		<!codificar desde aquí>
 
-		<form method="post" action="../Controllers/AgregarProductos.php" enctype="multipart/form-data">
-		<section class="col-xs-12 section">
+		<form method="post" action="../Controllers/AgregarProductos.php" enctype="multipart/form-data" >
+
+			<h1 align="center">Caracteristicas del Producto</h1>
+
+		<section class="col-xs-9 section" style="margin-left: 120px" >
 
 			<div class="col-xs-12 margen">
 				<div class="col-xs-12 pantalla_productos">
-					<div class="col-xs-2">
-						<label>Código producto</label>
-					</div>
-					<div class="col-xs-4">
-						<input class="form-control" id="codigo" name="codigo" >
+
+					<div class="col-xs-12">
+						<input class="form-control" id="codigo" placeholder="Código Producto" name="codigo" >
 					</div>
 				</div>
 				<div class="col-xs-12 pantalla_productos">
-					<div class="col-xs-2">
-						<label>Nombre producto</label>
-					</div>
-					<div class="col-xs-4">
-						<input class="form-control" id="nombre" name="nombre">
+
+					<div class="col-xs-12">
+						<input class="form-control" placeholder="Nombre Producto" id="nombre" name="nombre">
 					</div>
 				</div>
 				<div class="col-xs-12 pantalla_productos">
-					<div class="col-xs-2">
-						<label>Valor compra(ud)</label>
-					</div>
-					<div class="col-xs-4">
-						<input class="form-control" id="valor_compra" name="valor_compra">
+
+					<div class="col-xs-12">
+						<input class="form-control" placeholder="Valor Compra" id="valor_compra" name="valor_compra">
 					</div>
 				</div>
 				<div class="col-xs-12 pantalla_productos">
-					<div class="col-xs-2">
-						<label>Valor venta(ud)</label>
-					</div>
-					<div class="col-xs-4">
-						<input class="form-control" id="valor_venta" name="valor_venta">
+
+					<div class="col-xs-12">
+						<input class="form-control"  placeholder="Valor Venta" id="valor_venta" name="valor_venta">
 					</div>
 				</div>
 				<div class="col-xs-12 pantalla_productos">
-					<div class="col-xs-2">
-						<label>Cantidad</label>
-					</div>
-					<div class="col-xs-4">
-						<input  type="number" min="0" class="form-control" id="cantidad" name="cantidad">
+					<div class="col-xs-12">
+						<input  type="number" min="0" class="form-control" placeholder="Cantidad Disponible" id="cantidad" name="cantidad">
 					</div>
 				</div>
 
 
 				<div class="col-xs-12 pantalla_productos">
-					<div class="col-xs-2">
-						<label>Descripción</label>
-					</div>
-					<div class="col-xs-4">
-						<textarea rows="4" cols="50" class="form-control" id="descripcion" name="descripcion"></textarea>
+					<div class="col-xs-12">
+						<textarea rows="4" cols="50" class="form-control" placeholder="Descripción Producto" id="descripcion" name="descripcion"></textarea>
 					</div>
 				</div>
 
 				<div class="col-xs-12 pantalla_productos">
-					<div class="col-xs-2">
-						<label>Imagen</label>
+
+					<div class="col-xs-6">
+						<input type="file" id="archivo"   name="archivo">
 					</div>
-					<div class="col-xs-4">
-						<input type="file" id="archivo"  name="archivo">
+					<div class="col-xs-6" style="margin-top: 50px">
+						<button onclick="validacion()"  class="btn-primary form-control read"  id="botonval">validar</button>
 					</div>
 				</div>
-				<div class="col-xs-10"></div>
+
+
+				<div class="col-xs-10">
+
+				</div>
 				<div class="col-xs-2">
+
 
 				</div>
 
 				<!--<input type="submit" class="btn-primary form-control read" onclick="AgregarProducto()" value="Registrar producto"> -->
-				<button onclick="validacion()" class="btn-primary form-control read"  id="botonval">validar</button>
+
 			</div>
 
 		</section>

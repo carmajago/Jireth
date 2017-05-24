@@ -22,7 +22,7 @@ function  validar() {
             else
             {
                 correo=document.getElementById("correo").value;
-                if (corr == null || corr.length == 0 || /^\s+$/.test(crr)) {
+                if (correo == null || correo.length == 0 || /^\s+$/.test(correo)) {
                     alert("El campo correo esta vacio por favor ingrese un valor");
                 }
                 else
@@ -37,6 +37,7 @@ function  validar() {
 
 
 function insertar_usuario() {
+    alert("Estoy en el metodito");
     var cedula=document.getElementById("cedula").value;
     var nombre=document.getElementById("nombre").value;
     var apellido=document.getElementById("apellido").value;

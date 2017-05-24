@@ -33,7 +33,7 @@ function LeerSug() {
                     btn.appendChild(txt_btn);
                     btn.setAttribute("class", "btn-info form-control");
 
-                    td1.appendChild(cod)
+                    td1.appendChild(cod);
                     td2.appendChild(sug);
                     td3.appendChild(est);
                     td4.appendChild(btn);

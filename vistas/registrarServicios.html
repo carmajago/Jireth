@@ -30,7 +30,7 @@
 	  <h1 class="text-center">Registrar servicio</h1>
   </div>
 
-	<div class="heigth_section col-xs-12">
+  <div class="heigth_section col-xs-offset-2 col-xs-8">
 
 			<div class="navbar navbar-default navbar navbar-default navbar-fixed-top heigth_bar" role="navigation">
 				<div class="container">
@@ -45,11 +45,11 @@
 					</div>
 					<div class="navbar-collapse collapse navbar-right">
 						<ul class="nav navbar-nav">
-							<li class="active"><a>HOME</a></li>
-							<li><a>ABOUT</a></li>
-							<li><a >CONTACT</a></li>
+							<li class="active"><a>INICIO</a></li>
+							<li><a>SERVICIOS</a></li>
+							<li><a >PRODUCTOS</a></li>
 							<li class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown">PAGES <b class="caret"></b></a>
+								<a class="dropdown-toggle" data-toggle="dropdown">USUARIO<b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li><a>BLOG</a></li>
 									<li><a >SINGLE POST</a></li>
@@ -67,55 +67,54 @@
 		<!codificar desde aquí>
 		<section class="col-xs-12 section">
 
+			<h1 align="center">Caracteristicas del Servicio</h1>
 			<div class="col-xs-12 margen">
 				<div class="col-xs-12 pantalla_productos">
-					<div class="col-xs-2">
-						<label>Código servicio</label>
-					</div>
-					<div class="col-xs-4">
-						<input class="form-control" id="codigo" name="codigo" >
+
+					<div class="col-xs-12">
+						<input class="form-control" id="codigo" placeholder="Código Servicio" name="codigo" >
 					</div>
 				</div>
 				<div class="col-xs-12 pantalla_productos">
-					<div class="col-xs-2">
-						<label>Nombre servicio</label>
-					</div>
-					<div class="col-xs-4">
-						<input class="form-control" id="nombre" name="nombre">
+
+					<div class="col-xs-12">
+						<input class="form-control" id="nombre" placeholder="Nombre Servicio" name="nombre">
 					</div>
 				</div>
 				<div class="col-xs-12 pantalla_productos">
-					<div class="col-xs-2">
-						<label>Valor</label>
-					</div>
-					<div class="col-xs-4">
-						<input class="form-control" id="valor" name="valor">
+					<div class="col-xs-12">
+						<input class="form-control" id="valor" placeholder="Valor Servicio" name="valor">
 					</div>
 				</div>
 				<div class="col-xs-12 pantalla_productos">
-					<div class="col-xs-2">
-						<label>Tiempo</label>
-					</div>
-					<div class="col-xs-4">
-						<input  type="number" min="0" class="form-control" id="tiempo" name="tiempo">
+
+					<div class="col-xs-12">
+						<input  type="number" min="0" class="form-control" placeholder="Tiempo en Horas" id="tiempo" name="tiempo">
 					</div>
 				</div>
 
 
 				<div class="col-xs-12 pantalla_productos">
-					<div class="col-xs-2">
-						<label>Descripción</label>
-					</div>
-					<div class="col-xs-4">
-						<textarea rows="4" cols="50" class="form-control" id="descripcion" name="descripcion"></textarea>
+
+					<div class="col-xs-12">
+						<textarea rows="4" cols="50" class="form-control" id="descripcion" placeholder="Descripción" name="descripcion"></textarea>
 					</div>
 				</div>
+
+				<div class="col-xs-8 pantalla_productos" style="margin-top: 60px">
+
+					<div class="col-xs-12" >
+						<input type="submit" class="btn-primary form-control read" onclick="AgregarServicio()" value="Registrar servicio">
+					</div>
+				</div>
+
+
 				<div class="col-xs-10"></div>
 				<div class="col-xs-2">
 
 				</div>
 
-				<input type="submit" class="btn-primary form-control read" onclick="AgregarServicio()" value="Registrar servicio">
+
 			</div>
 
 		</section>

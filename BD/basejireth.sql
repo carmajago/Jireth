@@ -54,3 +54,14 @@ CONSTRAINT FK
     FOREIGN KEY(cedula) REFERENCES clientes(id) 
 );
 
+create table citas(
+fecha timestamp,
+hora number(4),
+cedula varchar2(20),
+motivo varchar2(4000),
+estado varchar2(30),
+CONSTRAINT PK
+PRIMARY KEY (fecha,hora,cedula),
+CONSTRAINT FKdos
+    FOREIGN KEY(cedula) REFERENCES clientes(id) 
+);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <title>Jireth</title>
 
@@ -13,25 +13,23 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="../js/JSleerSugerencias.js" LANGUAGE="JavaScript1.5"></script>
+	<script src="../js/JSConsultarCitasAdmin.js" language="JavaScript1.5"> </script>
 	<script src="../js/jquery.min.js.descarga" language="JavaScript1.5"></script>
 
 
   </head>
 
-
-  <body onload="LeerSug()">
+  <body onload="ConsulCitas()">
 
 
   <div class="heigth_bar"></div>
 <!---------------------------------------------------------------------------->
  <!NOMBRE ENCABEZADO--->
   <div class="col-xs-12 bg-primary barra_nombre">
-	  <h1 class="text-center">Sugerencias</h1>
+	  <h1 class="text-center">Citas</h1>
   </div>
 
-
-		<div class="heigth_section col-xs-offset-2 col-xs-8">
+  <div class="heigth_section col-xs-offset-2 col-xs-8">
 
 			<div class="navbar navbar-default navbar navbar-default navbar-fixed-top heigth_bar" role="navigation">
 				<div class="container">
@@ -67,31 +65,28 @@
 		<!--------------------------------------------------------------------->
 		<!codificar desde aquí>
 
-
-		<br>
-		<div class="row">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4 align="center">
-						Sugerencias de los usuarios de la Página
-					</h4>
-				</div>
-				<table class="table table-fixed" align="center" id="tbEliminar">
-					<thead>
-					<tr>
-						<th class="col-xs-3"><div align="center">Cedula</div></th><th class="col-xs-3"><div align="center">Sugerencia</div></th>
-						<th class="col-xs-3"><div align="center">Estado</div></th><th class="col-xs-3"><div align="center">Marcar</div></th>
-					</tr>
-					</thead>
-					<tbody id="tableBody">
-					<tr id='fila1'>
-					</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-
-
+	  <br>
+	  <div class="row">
+		  <div class="panel panel-default">
+			  <div class="panel-heading">
+				  <h4 align="center">
+					  CITAS DEL NEGOCIO
+				  </h4>
+			  </div>
+			  <table class="table table-fixed" align="center" id="tbCitas">
+				  <thead>
+				  <tr>
+					  <th class="col-xs-3" ><div align="center">Fecha</div></th><th class="col-xs-3"><div align="center"> Hora</div></th>
+					  <th class="col-xs-3"><div align="center">Cédula</div></th><th class="col-xs-3"><div align="center">Motivo</div></th>
+				  </tr>
+				  </thead>
+				  <tbody id="tableBody">
+				  <tr id='fila1'>
+				  </tr>
+				  </tbody>
+			  </table>
+		  </div>
+	  </div>
 
 
 		<section class="col-xs-12 heigth_section">
