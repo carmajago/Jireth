@@ -57,6 +57,7 @@ function mostrar_Productos() {
 function eliminar(codigo) {
     $.post("../Controllers/EliminarProductos.php",{"codigo":codigo}
         ,function (respuesta) {
+            alert("El producto fue eliminado exitosamente")
             location.reload();
         });
 }

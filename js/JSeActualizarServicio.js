@@ -59,8 +59,8 @@ function mostrar_Servicios() {
 
                 i1.setAttribute("value",datos[i].codigo);
                 i2.setAttribute("value",datos[i].nombre);
-                i3.setAttribute("value",datos[i].valor);
-                i4.setAttribute("value",datos[i].tiempo);
+                i3.setAttribute("value",datos[i].tiempo);
+                i4.setAttribute("value",datos[i].valor);
                 i5.setAttribute("value",datos[i].descripcion);
 
                 /*var  cod=document.createTextNode(datos[i].codigo);
@@ -107,7 +107,7 @@ function guardarCambios(codigo) {
     $.post("../Controllers/actualizarServicios.php",{"codigoViejo":codigo,"codigo":codigoN,"nombre":nombre,"valor":valor,"tiempo":tiempo,
                                                     "descripcion":descripcion}
         ,function (respuesta) {
-
+            alert("Servicio actualizado correctamente");
             location.reload();
         });
 }

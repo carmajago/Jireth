@@ -5,6 +5,9 @@
 
  */
 function  validar() {
+    /*
+    * Con estas validaciones nos aseguramos que ninguno de los campos este vacio*/
+
     ced = document.getElementById("cedula").value;
     if (ced == null || ced.length == 0  ||  /^\s+$/.test(ced)) {
         alert("El campo cedula esta vacio por favor ingrese un valor");
@@ -27,6 +30,8 @@ function  validar() {
                 }
                 else
                 {
+                    /*
+                    * Despues de verificar que ningún campo esta vacio se procede a llamar el metodo que hace la inserción*/
                     insertar_usuario();
                 }
             }
@@ -52,10 +57,6 @@ function insertar_usuario() {
         }else {
             alert("Usuario ya existe en el sistema");
 
-        }
-
-
+            }
         });
-
-
 }

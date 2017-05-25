@@ -4,6 +4,10 @@
 
 function validacion() {
 
+    /*
+     * Con estas validaciones nos aseguramos que ninguno de los campos este vacio*/
+
+
     cod = document.getElementById("codigo").value;
     if (cod == null || cod.length == 0  ||  /^\s+$/.test(cod)) {
         alert("El campo codigo esta vacio por favor ingrese un valor");

@@ -118,7 +118,7 @@ function guardarCambios(codigo) {
                                                     "valor_compra":valor_Compra,"cantidad":cantidad,
                                                     "descripcion":descripcion}
         ,function (respuesta) {
-
+            alert ("Producto actualizado exitosamente");
             location.reload();
         });
 }

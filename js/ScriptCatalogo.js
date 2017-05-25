@@ -32,7 +32,7 @@ function mostrararticulos()
             elementocol.appendChild(elementofilacolumna);
             var texto=document.createElement('div');
             var nombre=document.createTextNode(datos[i].nombre+"\n");
-            var valor=document.createTextNode("\nValor: $"+datos[i].valor_venta);
+            var valor=document.createTextNode("\nValor: $"+datos[i].valor_compra);
 
             texto.appendChild(nombre);
             texto.appendChild(valor);

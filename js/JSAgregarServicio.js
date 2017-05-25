@@ -15,7 +15,7 @@ function AgregarServicio()
                                                                 "valor":valor,"descripcion":descripcion}
     ,function (respuesta) {
 
-        alert(respuesta);
+        alert("El servicio fue agregado satisfactoriamente");
     });
 }
 
