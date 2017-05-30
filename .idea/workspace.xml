@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4227847-e001-4890-a37c-eefd7c1b3b75" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vistas/citas.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vistas/Catalogo.html" afterPath="$PROJECT_DIR$/vistas/Catalogo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vistas/citas.html" afterPath="$PROJECT_DIR$/vistas/citas.html" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,8 +64,8 @@
       <file leaf-file-name="citas.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vistas/citas.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="79" column="70" lean-forward="false" selection-start-line="79" selection-start-column="70" selection-end-line="79" selection-end-column="70" />
+            <state relative-caret-position="213">
+              <caret line="64" column="32" lean-forward="false" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -394,12 +392,12 @@
       <workItem from="1495662671160" duration="715000" />
       <workItem from="1495680849056" duration="674000" />
       <workItem from="1495721982164" duration="3285000" />
-      <workItem from="1496184445788" duration="2121000" />
+      <workItem from="1496184445788" duration="2728000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54849000" />
+    <option name="totallyTimeSpent" value="55456000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -739,8 +737,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vistas/citas.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="79" column="70" lean-forward="false" selection-start-line="79" selection-start-column="70" selection-end-line="79" selection-end-column="70" />
+        <state relative-caret-position="213">
+          <caret line="64" column="32" lean-forward="false" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
           <folding />
         </state>
       </provider>
