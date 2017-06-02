@@ -1,0 +1,4 @@
+[31-May-2017 21:07:17 America/Bogota] PHP Warning:  oci_execute(): ORA-02292: integrity constraint (JIRETH.FK) violated - child record found in C:\xampp\htdocs\Jireth\Jireth\Models\Client.php on line 64
+[02-Jun-2017 08:58:37 America/Bogota] PHP Warning:  oci_execute(): ORA-02292: integrity constraint (JIRETH.FK) violated - child record found in C:\xampp\htdocs\Jireth\Jireth\Models\Client.php on line 64
+[02-Jun-2017 08:58:49 America/Bogota] PHP Warning:  oci_execute(): ORA-02292: integrity constraint (JIRETH.FK) violated - child record found in C:\xampp\htdocs\Jireth\Jireth\Models\Client.php on line 64
+[02-Jun-2017 09:17:14 America/Bogota] PHP Warning:  oci_execute(): ORA-00911: invalid character in C:\xampp\htdocs\Jireth\Jireth\Models\Client.php on line 64

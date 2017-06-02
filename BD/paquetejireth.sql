@@ -19,6 +19,15 @@ procedure agregar_servicios(codigo servicios.codigo%type,
 							descripcion servicios.descripcion%type);
 
 /*
+Agregar una cita
+*/
+
+procedure agregar_cita(fecha citas.fecha%type,
+						hora citas.hora%type,
+						cedula citas.cedula%type,
+						motivo citas.motivo%type);
+
+/*
 Agrega un nuevo producto a la base de datos
 */
 procedure agregar_productos(codigo productos.codigo%type, 
@@ -116,6 +125,16 @@ create or replace package body jireth as
 	begin
 	insert into servicios values(codigo,nombre,costoServicio,tiempoHoras,descripcion);
 	end agregar_servicios;
+
+	procedure agregar_cita(fecha citas.fecha%type,
+						hora citas.hora%type,
+						cedula citas.cedula%type,
+						motivo citas.motivo%type)
+	as
+	begin
+	insert into citas values(fecha,hora,cedula,motivo);
+	end agregar_cita;
+
 
 	procedure actualizar_productos(codigos  productos.codigo%type,dato_actualizar varchar,actualizar varchar)
 	as

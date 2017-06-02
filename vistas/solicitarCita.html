@@ -9,14 +9,21 @@
     <!-- Custom styles for this template -->
     <link href="../css/style.css" rel="stylesheet">
 	<link href="../css/viewport.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="../js/jquery.min.js.descarga" language="JavaScript1.5"></script>
+
+	<script src="../js/jquery-3.2.1.js" language="JavaScript1.5"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/JSsolicitarCita.js" language="javascript1.5"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+
 
   </head>
 
-  <body>
+  <body onload="agregarCalendario();">
 
 
   <div class="heigth_bar"></div>
@@ -65,23 +72,25 @@
 		<h1 align="center">PEDIR CITA</h1>
 		<br>
 		<div class="row">
-		<input class="col-xs-8 form-control" type="text" placeholder="fecha" id="fecha">
+		  <input class="col-xs-12 form-control" type="text" placeholder="Cedula cliente" id="cedula">
+		</div>
+		<br>
+		<div class="row my_datepicker" align="center">
+			<div class="input-group date">
+				<input type="text" placeholder="dd/mm/aaaa" id="fecha" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+			</div>
 		</div>
 		<br>
 		<div class="row">
-		<input class="col-xs-12 form-control" type="text" placeholder="hora" id="hora">
+			<input class="col-xs-12 form-control" type="time" placeholder="hora" id="hora">
 		</div>
 		<br>
 		<div class="row">
-		<input class="col-xs-12 form-control" type="text" placeholder="Cedula cliente" id="Cedula">
+			<textarea class="col-xs-12" id="descripcion" cols="30" rows="8" placeholder="Descripcion"></textarea>
 		</div>
 		<br>
 		<div class="row">
-		<textarea class="col-xs-12" id="descripcion" cols="30" rows="8" placeholder="Descripcion"></textarea>
-		</div>
-		<br>
-		<div class="row">
-		<button type="button" class="btn-primary form-control col-xs-12" onclick="">Solicitar</button>
+		<button type="button" class="btn-primary form-control col-xs-12" onclick="solicitud();">Solicitar</button>
 		</div>
 
 

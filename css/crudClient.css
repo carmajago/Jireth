@@ -1,0 +1,19 @@
+.remove-float{
+    float: none;
+}
+
+.top-space{
+    margin-top: 10px;
+}
+
+.big-top-space{
+    margin-top: 30px;
+}
+
+.left-float{
+    float: left;
+}
+
+.right-float{
+    align-content: flex-end;
+}

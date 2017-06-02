@@ -5,25 +5,15 @@ $con =new Conexion();
 $con->conectar();
 $cedula=$_POST['cedula'];
 
-$stid = oci_parse($con->conexion, 'select * from clientes where id = :cedula');
+$stid = oci_parse($con->conexion, 'select count(*) from clientes where id = :cedula');
 oci_bind_by_name($stid, ':cedula', $cedula);
-oci_execute($stid);
 
-$M;
-$i=(int)0;
-while ($row = oci_fetch_array($stid, OCI_BOTH)) {
+oci_execute($stid, OCI_DEFAULT);
 
-    $response=array("cedula"=>"".$row[0]);
+$results=array();
+$numrows = oci_fetch_all($stid, $results, null, null, OCI_FETCHSTATEMENT_BY_ROW);
 
-    $M[$i]=$response;
-    $i++;
-}
-if($M!=null){
-        echo 1;
-}else
-    echo 0;
-
-
+echo $numrows;
 
 ?>
 
