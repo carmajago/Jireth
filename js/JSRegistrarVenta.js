@@ -1,10 +1,20 @@
+var fac;
 var subT = 0;
 var Tot = 0;
 var iva = 0;
 
 $(document).ready(function(){
-    var i=1;
-    $('#nFactura').text("Factura No. "+ i);
+
+    var i = 0;
+
+    $.post("../Controllers/NumeroFactura.php", {}, function(respuesta) {
+
+        fac = parseInt(respuesta);
+
+        $('#nFactura').text("Factura No. " + fac);
+
+    });
+
     $("#add_row").click(function(){
         $('#addr'+i).html(
             "<td class='col-xs-1'>"+ (i+1) +"</td>" +
@@ -83,6 +93,8 @@ function ponerPrecio(idCont){
 
 
 function Registrar() {
+
+    //alert(fac);
     if(document.getElementById("identificador").value == ""
        ||document.getElementById("nombre").value == ""
         ||document.getElementById("apellido").value == ""
@@ -94,18 +106,28 @@ function Registrar() {
         var apellido = document.getElementById("apellido").value;
         var correo = document.getElementById("email").value;
         $.post("../Controllers/ConsultarCliente.php", {
-                "cedula": cedula,
-                "nombre": nombre,
-                "apellido": apellido,
-                "correo": correo
+                "cedula": cedula
             }
             ,function (respuesta) {
 
-                if (respuesta != 1) {
+                alert(respuesta);
+
+                if (respuesta == 0) {
                     var r = confirm("El cliente no esta registrado. ¿Desea registrarlo?");
                     if (r == true) {
                         window.open("../vistas/RegistrarCliente.html");
                     }
+                }else{
+
+                    $.post("../Controllers/RegistrarVenta.php",{
+                        "id_venta": fac,
+                        "valor_venta": $("#Total").val(),
+                        "cedula": cedula
+                        }, function(respuesta2) {
+
+                            alert(respuesta2);
+
+                    });
                 }
             });
     }

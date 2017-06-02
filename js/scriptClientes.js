@@ -76,7 +76,7 @@ function updateClient() {
         //Se verifica si los campos estan llenos
         //Se verifica si el correro tiene una sintaxis correct algo@algo.algo
 
-        var data = `idUpdate=${$idUpdate}&nameUpdate=${$nameUpdate}&lastNameUpdate=${$lastNameUpdate}&emailUpdate=${$emailUpdate}`;
+        var data = 'idUpdate=${$idUpdate}&nameUpdate=${$nameUpdate}&lastNameUpdate=${$lastNameUpdate}&emailUpdate=${$emailUpdate}';
         alert(data);
         $.ajax({
             url: '../Controllers/controllerClients.php?' + data,
@@ -151,7 +151,7 @@ function makeTable(data) {
 
 
 function deleteClient(id) {
-    var data = `id=${id}`;
+    var data = 'id=${id}';
     $.ajax({
         url: '../Controllers/controllerClients.php?' + data,
         method: 'DELETE',
