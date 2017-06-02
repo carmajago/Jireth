@@ -16,7 +16,6 @@ class Client
 
         $stid = oci_parse($connection->getConexion(), 'SELECT * FROM CLIENTES');
         oci_execute($stid);
-
         $nrows = oci_fetch_all($stid, $response, null, null, OCI_FETCHSTATEMENT_BY_ROW);
 
         echo json_encode($response);
