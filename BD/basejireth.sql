@@ -1,5 +1,8 @@
+drop table citas;
+drop table sugerencias;
 drop table productos;
 drop table clientes;
+
 drop table productosporventa;
 drop table registro_ventas;
 drop table servicios;
@@ -31,8 +34,7 @@ create table registro_ventas(
 id_venta number(30) primary key not null,
 fecha timestamp,
 valor_venta  number(20),
-nombre_producto varchar2(15),
-cantidad number
+cedula_cliente varchar2(20)
 );
 
 create table productosporventa(
@@ -40,6 +42,7 @@ id_venta number(30),
 codigo_producto varchar2(15),
 nombre varchar2(15),
 cantidad number,
+valor_venta number(20),
 CONSTRAINT ventaFK
     FOREIGN KEY(id_venta) REFERENCES registro_ventas(id_venta) 
 );
@@ -50,7 +53,7 @@ sugerencia varchar2(4000),
 estado varchar2(30),
 CONSTRAINT PK
 PRIMARY KEY (cedula,sugerencia),
-CONSTRAINT FK
+CONSTRAINT PKsugerencias
     FOREIGN KEY(cedula) REFERENCES clientes(id) 
 );
 
@@ -60,7 +63,7 @@ hora number(4),
 cedula varchar2(20),
 motivo varchar2(4000),
 estado varchar2(30),
-CONSTRAINT PK
+CONSTRAINT PKid
 PRIMARY KEY (fecha,hora,cedula),
 CONSTRAINT FKdos
     FOREIGN KEY(cedula) REFERENCES clientes(id) 
