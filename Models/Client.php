@@ -16,6 +16,7 @@ class Client
 
         $stid = oci_parse($connection->getConexion(), 'SELECT * FROM CLIENTES');
         oci_execute($stid);
+
         $nrows = oci_fetch_all($stid, $response, null, null, OCI_FETCHSTATEMENT_BY_ROW);
 
         echo json_encode($response);
@@ -34,8 +35,7 @@ class Client
     {
         extract($params);
         $connection->conectar();
-
-        $stid = oci_parse($connection->getConexion(), "SELECT * FROM CLIENTES WHERE ID = $id");
+        $stid = oci_parse($connection->getConexion(), "SELECT * FROM CLIENTES WHERE ID = '$id'");
         oci_execute($stid);
         $nrows = oci_fetch_all($stid, $response, null, null, OCI_FETCHSTATEMENT_BY_ROW);
 
@@ -46,7 +46,7 @@ class Client
     {
         extract($params);
         $connection->conectar();
-        $sql = "UPDATE CLIENTES SET NOMBRE = '$nameUpdate', APELLIDO = '$lastNameUpdate', CORREO = '$emailUpdate' WHERE ID = $idUpdate";
+        $sql = "UPDATE CLIENTES SET NOMBRE = '$nameUpdate', APELLIDO = '$lastNameUpdate', CORREO = '$emailUpdate' WHERE ID = '$idUpdate'";
         $stid = oci_parse($connection->getConexion(), $sql);
         oci_execute($stid);
         $response['status'] = 'success';
@@ -58,7 +58,7 @@ class Client
     {
         extract($params);
         $connection->conectar();
-        $sql = "DELETE FROM CLIENTES WHERE ID = $id";
+        $sql = "DELETE FROM CLIENTES WHERE ID = '$id'";
         $stid = oci_parse($connection->getConexion(), $sql);
         oci_execute($stid);
         echo $stid;

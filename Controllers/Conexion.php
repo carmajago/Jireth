@@ -17,7 +17,7 @@ class conexion{
     }
     public function  conectar(){
 
-        $this->conexion=oci_pconnect('jireth', 'software', 'localhost/XE');
+        $this->conexion=oci_pconnect('jireth', '1234', 'localhost/XE');
         if (!$this->conexion)
             echo json_encode("Error al conectar");
 

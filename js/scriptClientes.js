@@ -56,10 +56,6 @@ function addClient() {
             success: function (response) {
                 alert("Insert Successfully ");
                 console.log(response);
-            },
-            error: function (err) {
-                alert('Error al añadir cliente' + err);
-                console.log(err);
             }
         });
     }
@@ -74,7 +70,7 @@ function updateClient() {
     alert($emailUpdate);
     if ($idUpdate !== "" && $nameUpdate !== "" && $lastNameUpdate !== "" && $emailUpdate !== "") {
         //Se verifica si los campos estan llenos
-        //Se verifica si el correro tiene una sintaxis correct algo@algo.algo
+        //Se verifica si el correo tiene una sintaxis correct algo@algo.algo
 
         var data = `idUpdate=${$idUpdate}&nameUpdate=${$nameUpdate}&lastNameUpdate=${$lastNameUpdate}&emailUpdate=${$emailUpdate}`;
         alert(data);
@@ -83,7 +79,7 @@ function updateClient() {
             method: 'PUT',
             contentType: "application/json",
             success: function (response) {
-                alert("Update Successfully ");
+                alert("Actualización exitosa");
                 console.log(response);
             }
         });
@@ -92,6 +88,7 @@ function updateClient() {
 }
 
 function updateModal(id) {
+
     $.ajax({
         url: '../Controllers/controllerClients.php',
         type: 'GET',
@@ -103,6 +100,7 @@ function updateModal(id) {
             console.log(response);
             var data = jQuery.parseJSON(response);
             setModalData(data);
+
         },
         error: function (err) {
             alert('Error al obtener datos' + err);
@@ -126,12 +124,12 @@ function setModalData(data) {
 function makeTable(data) {
     var codigo = '';
     codigo += "<thead>" +
-        "<tr><th>Id</th>" +
-        "<th>Name</th>" +
-        "<th>LastName</th>" +
-        "<th>Email</th>" +
-        "<th>Update</th>" +
-        "<th>Delete</th>" +
+        "<tr><th>Cédula</th>" +
+        "<th>Nombre</th>" +
+        "<th>Apellido</th>" +
+        "<th>Correo</th>" +
+        "<th>Actualizar</th>" +
+        "<th>Eliminar</th>" +
         "</tr>" +
         "</thead> <tbody>";
     $.each(data, function (index, i) {
@@ -161,7 +159,7 @@ function deleteClient(id) {
 
         },
         error: function (err) {
-            alert('Error al actualizar informacion' + err);
+            alert('Error al eliminar informacion' + err);
             console.log(err);
         }
     });

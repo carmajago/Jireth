@@ -30,6 +30,7 @@ switch ($method) {
             if ($_REQUEST['option'] == 1) {
                 $client->getAllClients($_REQUEST);
             } else if ($_REQUEST['option'] == 2 && isset($_REQUEST['id'])) {
+                error_log(print_r($_REQUEST, 1));
                 $client->getClient($_REQUEST);
             }
         }
